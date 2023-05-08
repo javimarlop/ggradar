@@ -2,6 +2,7 @@
 #'
 #' @param plot.data dataframe comprising one row per group
 #' @param base.size text size
+#' @param title.size text size
 #' @param font.radar text font family
 #' @param values.radar values to print at minimum, 'average', and maximum gridlines
 #' @param axis.labels  names of axis labels if other than column names supplied via plot.data
@@ -68,6 +69,7 @@
 #' }
 ggradar <- function(plot.data,
                     base.size = 15,
+                    title.size = 20,
                     font.radar = "sans",
                     values.radar = c("0%", "50%", "100%"),
                     axis.labels = colnames(plot.data)[-1],
@@ -311,8 +313,8 @@ ggradar <- function(plot.data,
   }
 
   base <- base + theme(legend.key.width = unit(3, "line")) + theme(text = element_text(
-    size = 10,
-    hjust = 0.5,
+    size = title.size,
+    hjust = 1,
     family = font.radar
   )) +
     theme(legend.text = element_text(size = legend.text.size), legend.position = legend.position) +

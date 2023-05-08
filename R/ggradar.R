@@ -312,6 +312,7 @@ ggradar <- function(plot.data,
 
   base <- base + theme(legend.key.width = unit(3, "line")) + theme(text = element_text(
     size = 10,
+    hjust = 0.5,
     family = font.radar
   )) +
     theme(legend.text = element_text(size = legend.text.size), legend.position = legend.position) +
